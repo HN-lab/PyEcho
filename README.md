@@ -32,33 +32,20 @@ Figure 1: A snippet of an empty design spreadsheet (96 well-plate format) with 3
 
 There are 5 major components in this template:
 
-1. **The Multi-well plate Grid:**
+1. **The Multi-well plate Grid**
+: This is a 2-dimensional grid with dimensions as specified by the user. Each cell in the grid corresponds to a well on the plate. This is the area where volumes of liquid reagent to be dispensed in each well are entered. When the cell is blank, it means no dispensing operation is needed. Since the table is in an editable MS Excel format, one can explore options like &quot;copy-paste&quot;, &quot;Drag-down&quot;, &quot;Autofill&quot;, etc to efficiently design the experiments. <br> <br> One thing to keep in mind here for Echo based experiments is that the minimal droplet volume (25 nl for Beckman Coulter Labcyte Echo® 525 Liquid Handler) defines both the minimal value and the step volume size that the Echo can dispense. Hence it is important to enter values that are multiples of this minimum droplet volume. <br> <br> Also, one can fill volumes in any unit of measurement, however, it is important to keep in mind the scaling factor with respect to the nanoliter scale. (For example, in figure 3, the volumes have been entered in microliter units. So, the corresponding volume factor that needs to be specified is 1000 (see description of script #2 below).
 
-This is a 2-dimensional grid with dimensions as specified by the user. Each cell in the grid corresponds to a well on the plate. This is the area where volumes of liquid reagent to be dispensed in each well are entered. When the cell is blank, it means no dispensing operation is needed. Since the table is in an editable MS Excel format, one can explore options like &quot;copy-paste&quot;, &quot;Drag-down&quot;, &quot;Autofill&quot;, etc to efficiently design the experiments.
+2. **Reagent Name**
+: This is the cell corresponding the first row of the grid and next column after the grid. In this cell, one must specify the name of the reagent. The volumes of this particular reagent to be dispensed in each of the wells need to be entered in the adjacent multi-well plate grid.
 
-One thing to keep in mind here for Echo based experiments is that the minimal droplet volume (25 nl for Beckman Coulter Labcyte Echo® 525 Liquid Handler) defines both the minimal value and the step volume size that the Echo can dispense. Hence it is important to enter values that are multiples of this minimum droplet volume.
+3. **Source Plate Name**
+: This is the cell adjacent to the reagent name. This entry is essential for using the Echo liquid dispenser. It helps the machine to identify the plate type and the liquid composition for accurate calibration from which the reagent has to be picked. More information about the Source Plate Types can be found on the [official website](https://www.labcyte.com/documentation/ECHO65XT_HTML5/Content/PROJECTS/ECHO65XT_UG/CONTENT/c_Labware.htm) of Labcyte. <br> _Structure of source plate name: No. of wells + plate specs.\_liquid type\_key feature\_other features_ <br> _Example 1: 384PP\_AQ\_BP (384-well+polypropylene \_ aqueous\_buffer)_
 
-Also, one can fill volumes in any unit of measurement, however, it is important to keep in mind the scaling factor with respect to the nanoliter scale. (For example, in figure 3, the volumes have been entered in microliter units. So, the corresponding volume factor that needs to be specified is 1000 (see description of script #2 below).
+4. **Source Well Number**
+: This is the column adjacent to the source plate name. This entry is also essential for using the Echo liquid dispenser. It helps the machine to identify the well number from which the reagent has to be picked.
 
-2. **Reagent Name:**
-
-This is the cell corresponding the first row of the grid and next column after the grid. In this cell, one must specify the name of the reagent. The volumes of this particular reagent to be dispensed in each of the wells need to be entered in the adjacent multi-well plate grid.
-
-3. **Source Plate Name:**
-
-This is the cell adjacent to the reagent name. This entry is essential for using the Echo liquid dispenser. It helps the machine to identify the plate type and the liquid composition for accurate calibration from which the reagent has to be picked. More information about the Source Plate Types can be found on the [official website](https://www.labcyte.com/documentation/ECHO65XT_HTML5/Content/PROJECTS/ECHO65XT_UG/CONTENT/c_Labware.htm) of Labcyte.
-
-_Structure of source plate name: No. of wells + plate specs.\_liquid type\_key feature\_other features_
-
-_Example 1: 384PP\_AQ\_BP (384-well+polypropylene \_ aqueous\_buffer)_
-
-4. **Source Well Number:**
-
-This is the column adjacent to the source plate name. This entry is also essential for using the Echo liquid dispenser. It helps the machine to identify the well number from which the reagent has to be picked.
-
-5. **Sheet 2:**
-
-All the previous 4 components belong to Sheet 1 in the Excel file (see Figure 1). Sheet 2 in the Excel file carries information about the well numbers in the grid as it would be recognized by the machine. This Sheet would give an idea to the user about the well numbers and will facilitate experiment design. (See Figure 2)
+5. **Sheet 2**
+: All the previous 4 components belong to Sheet 1 in the Excel file (see Figure 1). Sheet 2 in the Excel file carries information about the well numbers in the grid as it would be recognized by the machine. This Sheet would give an idea to the user about the well numbers and will facilitate experiment design. (See Figure 2)
 
 ![](RackMultipart20210702-4-ft03c9_html_a048b690ff262368.png)
 
