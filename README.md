@@ -26,9 +26,9 @@ A description on how to plan experiments using the Design table spreadsheet is g
 
 The first step is to generate the design table template using the generate\_blank\_design\_table.py script to plan the experiments. An empty design table will look like the following figure:
 
-![Fig1](https://user-images.githubusercontent.com/58513314/124584536-fd766e80-de71-11eb-998f-66509d851584.png)
-
-Figure 1: A snippet of an empty design spreadsheet (96 well-plate format) with 3 reagents in the experiment
+| ![Fig1](https://user-images.githubusercontent.com/58513314/124584536-fd766e80-de71-11eb-998f-66509d851584.png) |
+|:--:|
+| <b>Figure 1: A snippet of an empty design spreadsheet (96 well-plate format) with 3 reagents in the experiment</b>|
 
 There are 5 major components in this template:
 
@@ -39,7 +39,7 @@ There are 5 major components in this template:
 : This is the cell corresponding the first row of the grid and next column after the grid. In this cell, one must specify the name of the reagent. The volumes of this particular reagent to be dispensed in each of the wells need to be entered in the adjacent multi-well plate grid.
 
 3. **Source Plate Name**
-: This is the cell adjacent to the reagent name. This entry is essential for using the Echo liquid dispenser. It helps the machine to identify the plate type and the liquid composition for accurate calibration from which the reagent has to be picked. More information about the Source Plate Types can be found on the [official website](https://www.labcyte.com/documentation/ECHO65XT_HTML5/Content/PROJECTS/ECHO65XT_UG/CONTENT/c_Labware.htm) of Labcyte. <br> _Structure of source plate name: No. of wells + plate specs.\_liquid type\_key feature\_other features_ <br> _Example 1: 384PP\_AQ\_BP (384-well+polypropylene \_ aqueous\_buffer)_
+: This is the cell adjacent to the reagent name. This entry is essential for using the Echo liquid dispenser. It helps the machine to identify the plate type and the liquid composition for accurate calibration from which the reagent has to be picked. More information about the Source Plate Types can be found on the [official website](https://www.labcyte.com/documentation/ECHO65XT_HTML5/Content/PROJECTS/ECHO65XT_UG/CONTENT/c_Labware.htm) of Labcyte. <br> <span style="color:SkyBlue"> _Structure of source plate name: No. of wells + plate specs.\_liquid type\_key feature\_other features_ <br> _Example 1: 384PP\_AQ\_BP (384-well+polypropylene \_ aqueous\_buffer)_ </span>
 
 4. **Source Well Number**
 : This is the column adjacent to the source plate name. This entry is also essential for using the Echo liquid dispenser. It helps the machine to identify the well number from which the reagent has to be picked.
@@ -47,69 +47,64 @@ There are 5 major components in this template:
 5. **Sheet 2**
 : All the previous 4 components belong to Sheet 1 in the Excel file (see Figure 1). Sheet 2 in the Excel file carries information about the well numbers in the grid as it would be recognized by the machine. This Sheet would give an idea to the user about the well numbers and will facilitate experiment design. (See Figure 2)
 
-![Fig2](https://user-images.githubusercontent.com/58513314/124585996-83df8000-de73-11eb-9529-c532c2d2cab1.png)
 
-_Figure 2: A snippet of Sheet 2 of the Excel file (96 well-plate format)_
+| ![Fig2](https://user-images.githubusercontent.com/58513314/124585996-83df8000-de73-11eb-9529-c532c2d2cab1.png) |
+|:--:|
+| <b>Figure 2: A snippet of Sheet 2 of the Excel file (96 well-plate format)</b>|
 
 With the modular Python Script, one can practically generate any kind of multi-well plate template including most of the standard formats(48-wells, 96-wells, 384-wells, 1536-wells).
 
 A filled 384 well plate design table will look like the following figure:
 
-<img width="495" alt="Fig3" src="https://user-images.githubusercontent.com/58513314/124592078-ad4fda00-de7a-11eb-99a2-36b5882df7cc.png">
-
-Figure 3: Example of a Completely filled design spreadsheet (384 well-plate format) with 3 reagents in the experiment
+| ![Fig3](https://user-images.githubusercontent.com/58513314/124592078-ad4fda00-de7a-11eb-99a2-36b5882df7cc.png) |
+|:--:|
+| <b>Figure 3: Example of a Completely filled design spreadsheet (384 well-plate format) with 3 reagents in the experiment</b>|
 
 An important thing to note over here is that if you have multiple source wells on the source plate for a particular reagent, please mention the well numbers one below the other in the same column (See the case of TX-TL master mix in Figure 3).
 
 ## **More About Using the Python Scripts**
 
-### **Script #1:** _ **generate\_blank\_design\_table.py** _
+### **Script #1:** __*generate\_blank\_design\_table.py*__
 
 If you open this script on an IDLE, immediately after the import statements, you will see an assignment section in the Script (see Figure 4). Variables in this section can be assigned by the user before running the script as per requirements of the experiment.
 
-<img width="514" alt="Fig4" src="https://user-images.githubusercontent.com/58513314/124587790-a83c5c00-de75-11eb-9212-cf05de88b69b.png">
-
-Figure 4: generate\_blank\_design\_table.py opened on PyCharm
+| ![Fig4](https://user-images.githubusercontent.com/58513314/124587790-a83c5c00-de75-11eb-9212-cf05de88b69b.png) |
+|:--:|
+| <b>Figure 4: generate\_blank\_design\_table.py opened on PyCharm</b>|
 
 After completing the assignment, the user can directly run the script. In the end of the script, the function &quot;create\_file&quot; has been called with the appropriate arguments. The desired Experiment Design template will be generated in the same directory as this Python file.
 
-![Fig5](https://user-images.githubusercontent.com/58513314/124586280-dde04580-de73-11eb-865c-07450d4d78eb.png)
-
-Figure 5: last two lines of generate\_blank\_design\_table.py
+| ![Fig5](https://user-images.githubusercontent.com/58513314/124586280-dde04580-de73-11eb-865c-07450d4d78eb.png) |
+|:--:|
+| <b>Figure 5: last two lines of generate\_blank\_design\_table.py</b>|
 
 After generating the Design template, the user can plan their experiments according to the format described in the previous section. This design template shall be used as an input to the next script.
 
-### **Script #2:** _ **generate\_echo\_setup\_file.py** _
+### **Script #2:** __*generate\_echo\_setup\_file.py*__
 
 If you open this script on an IDLE, immediately after the import statements, you will see an assignment section in the Script (see Figure 6). Variables in this section shall be assigned before running the script.
 
-<img width="495" alt="Fig6" src="https://user-images.githubusercontent.com/58513314/124588908-fc940b80-de76-11eb-9e1c-e6bf6e564470.png">
-
-Figure 6: generate\_echo\_setup\_file.py opened on PyCharm
+| ![Fig6](https://user-images.githubusercontent.com/58513314/124588908-fc940b80-de76-11eb-9e1c-e6bf6e564470.png) |
+|:--:|
+| <b>Figure 6: generate\_echo\_setup\_file.py opened on PyCharm</b>|
 
 Some of the variables are quite straightforward, however, some important points must be kept in mind while assigning values.
 
-- Please double-check the name of the file before assigning it to the variable &quot; **design\_file**&quot;. Also make sure that the design file is in the same directory as the script, else assign the proper path of the file.
-- &quot; **total\_volume**&quot; is equivalent to the _reaction volume_ in each well in nanoliters. If there is no fixed reaction volume in the experiment, the maximum volume limit for each well must be assigned to this variable.
-- The script will be handling all volumes in nanoliters, so if you have entered values in the design table in some other scaling units, the scaling factor must be assigned to the variable &quot; **volume\_factor**&quot;. For example, if you have entered microliter volumes in the design table (like in the example in Fig. 3), volume\_factor must be assigned to 1000. If you have entered nanoliter volumes in the design table, volume\_factor must be assigned to 1.
-- For the acoustic liquid transfer feature of Echo, there are certain volume constraints. For instance, for the Labcyte Echo® 525 Liquid Handler, each source well has a restricted volume contained between 20 μl and 65 μl. In other words, the input well cannot be filled with more than 65 μl and cannot dispense the liquid if it gets below 20 μl. The working volume is thus about 45 μl. And this varies with the different models of Echo and different source plates. Hence the volume constraints must be assigned to the variables &quot; **max\_volume**&quot; and &quot; **min\_volume**&quot;.
-- For experiments which have fixed reaction volumes (assigned to &quot;total\_volume&quot;), the user may want the script to calculate the volume of water/buffer to make up the reaction volume (if not already calculated in the design table). If that&#39;s the case, the user can assign **calculate\_water = &quot;yes&quot;** and assign the source plate name and source wells to variables &quot; **water\_plate\_name**&quot; and &quot; **water\_source\_well**&quot; respectively.
+- Please double-check the name of the file before assigning it to the variable "**design\_file**". Also make sure that the design file is in the same directory as the script, else assign the proper path of the file.
+- "**total\_volume**" is equivalent to the _reaction volume_ in each well in nanoliters. If there is no fixed reaction volume in the experiment, the maximum volume limit for each well must be assigned to this variable.
+- The script will be handling all volumes in nanoliters, so if you have entered values in the design table in some other scaling units, the scaling factor must be assigned to the variable "**volume\_factor**". For example, if you have entered microliter volumes in the design table (like in the example in Fig. 3), volume\_factor must be assigned to 1000. If you have entered nanoliter volumes in the design table, volume\_factor must be assigned to 1.
+- For the acoustic liquid transfer feature of Echo, there are certain volume constraints. For instance, for the Labcyte Echo® 525 Liquid Handler, each source well has a restricted volume contained between 20 μl and 65 μl. In other words, the input well cannot be filled with more than 65 μl and cannot dispense the liquid if it gets below 20 μl. The working volume is thus about 45 μl. And this varies with the different models of Echo and different source plates. Hence the volume constraints must be assigned to the variables "**max\_volume**" and "**min\_volume**".
+- For experiments which have fixed reaction volumes (assigned to &quot;total\_volume&quot;), the user may want the script to calculate the volume of water/buffer to make up the reaction volume (if not already calculated in the design table). If that&#39;s the case, the user can assign **calculate\_water = "yes"** and assign the source plate name and source wells to variables "**water\_plate\_name**" and "**water\_source\_well**" respectively. <br>  Please note that if there are multiple source wells for water, please mention them in a python list format to the variable "water\_source\_well". <br> <span style="color:SkyBlue"> _\*Python list format:_ <br> _variable = [&quot;well1&quot;, &quot;well2&quot;, …. , &quot;wellN&quot;]_ </span>
 
-Please note that if there are multiple source wells for water, please mention them in a python list format to the variable &quot;water\_source\_well&quot;.
+If you scroll to the end of the python script, you can see the two functions being called. I you want to call only one of the functions, you can do so by commenting the other function (adding a "\#" in front of the function you don't want to call).
 
-_\*Python list format:_
+| ![Fig7](https://user-images.githubusercontent.com/58513314/124586439-0d8f4d80-de74-11eb-8f34-d6b8575ba794.png) |
+|:--:|
+| <b>Figure 7: last two lines of generate\_echo\_setup\_file.py</b>|
 
-_variable = [&quot;well1&quot;, &quot;well2&quot;, …. , &quot;wellN&quot;]_
+Calling _"echo\_format"_ will generate 2 CSV files: setup\_\<date\>.csv and reagent\_well\_volumes.csv. **setup\_\<date\>.csv** is an Echo compatible CSV file. This file can directly be uploaded to the Echo software for automatic pipetting. **reagent\_well\_volumes.csv** is a user-friendly CSV file carrying information about volume of reagents required in the source wells (calculated based on the volume constraints of Echo as well as the total volume of reagent being pipetted.
 
-If you scroll to the end of the python script, you can see the two functions being called. I you want to call only one of the functions, you can do so by commenting the other function (adding a &quot;#&quot; in front of the function you don&#39;t want to call).
-
-![Fig7](https://user-images.githubusercontent.com/58513314/124586439-0d8f4d80-de74-11eb-8f34-d6b8575ba794.png)
-
-_Figure 7: last two lines of generate\_echo\_setup\_file.py_
-
-Calling _&quot;echo\_format&quot;_ will generate 2 CSV files: setup\_\&lt;date\&gt;.csv and reagent\_well\_volumes.csv. **setup\_\&lt;date\&gt;.csv** is an Echo compatible CSV file. This file can directly be uploaded to the Echo software for automatic pipetting. **reagent\_well\_volumes.csv** is a user-friendly CSV file carrying information about volume of reagents required in the source wells (calculated based on the volume constraints of Echo as well as the total volume of reagent being pipetted.
-
-Calling the _&quot;input\_heatmap&quot;_ function will generate volume heatmap images similar to the multi-well plate grid, but in a visually understandable, color-coded format instead of the numerical representation in the design table. The heatmap images can be used to describe the experiment design to peers and colleagues, and can be preserved for future designing as a visual representation of the volume of reagents in each well.
+Calling the *"input\_heatmap"* function will generate volume heatmap images similar to the multi-well plate grid, but in a visually understandable, color-coded format instead of the numerical representation in the design table. The heatmap images can be used to describe the experiment design to peers and colleagues, and can be preserved for future designing as a visual representation of the volume of reagents in each well.
 
 ## **Note:**
 
