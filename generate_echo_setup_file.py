@@ -150,22 +150,20 @@ def echo_format(tot_rows, tot_columns, tot_volume, vol_factor, max_vol, min_vol,
                     if err < 1:
                         error_message("Please add more wells in the source plate for water!")
                         print("Please add more wells in the source plate for water!")
-                    err = 1
-                    newentry = [1, water_list[1], "", 1, well.cell(row=2 + k, column=j).value,
+                    err += 1
+                    water_list.append("")
+                    newentry = [1, water_list[1], water_list[2 + flag[-1]], 1, well.cell(row=2 + k, column=j).value,
                                 water_volume(well_volume, tot_volume), "water"]
                 data.append(newentry)
             j += 1
             well_volume = 0
         k += 1
 
-    if (water_list[0] == "yes") and err == 0:
-        print("Volume of water in well number ", water_list[2 + flag[-1]], " should be ", reagent_volume[-1] + min_vol,
-              "nanolitres")
-        infile_data.append(["Water", water_list[2 + flag[-1]], (reagent_volume[-1] + min_vol) / vol_factor])
+    if (water_list[0] == "yes"):
         if flag[-1] > 0:
-            print("Volume of water in rest of the wells must be ", max_vol, "nanolitres")
             for i in range(0, flag[-1]):
                 infile_data.append(["Water", water_list[2 + i], max_vol / vol_factor])
+        infile_data.append(["Water", water_list[2 + flag[-1]], (reagent_volume[-1] + min_vol) / vol_factor])
 
     # Opening a CSV design_file to enter source plate reagent volumes
     infile = open('reagent_well_volumes.csv', 'w', newline='')
