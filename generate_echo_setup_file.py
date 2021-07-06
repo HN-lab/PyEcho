@@ -214,7 +214,7 @@ def constraints(tot_rows, tot_cols, vol_factor, max_vol, min_vol, file):
                     reagent_volume += volume
                     if reagent_volume > max_vol - min_vol:
                         v = (reagent_volume - volume + min_vol) / vol_factor
-                        infile_dataset = [sheet.cell(row=i + h, column=tot_cols + 2).value,
+                        infile_dataset = [sheet.cell(row=i, column=tot_cols + 2).value,
                                           sheet.cell(row=i + h, column=tot_cols + 4).value, v]
                         in_file_data.append(
                             infile_dataset)  # # storing the volume of reagent required in each source well
@@ -225,7 +225,7 @@ def constraints(tot_rows, tot_cols, vol_factor, max_vol, min_vol, file):
                 j += 1
             k += 1
         v = (reagent_volume + min_vol) / vol_factor
-        infile_dataset = [sheet.cell(row=i + h, column=tot_cols + 2).value,
+        infile_dataset = [sheet.cell(row=i, column=tot_cols + 2).value,
                           sheet.cell(row=i + h, column=tot_cols + 4).value, v]
         in_file_data.append(
             infile_dataset)  # # storing the volume of reagent required in the last source well for the current reagent
