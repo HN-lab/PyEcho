@@ -1,6 +1,6 @@
 # **PyEcho**
 
-This is a Python script developed to facilitate planning and designing of biological experiments in Multi-well Plate setup, followed by automatically generating an input file for theBeckman Coulter Labcyte Echo® 525 Liquid Handler (used for automatic multi-well acoustic liquid transfer) to execute the planned experiments. The script has been developed keeping in mind the case of high-throughput cell-free transcription and translation (TX-TL) experiments, however, its usage can further be expanded to all kinds of high-throughput experiments utilizing the Echo Liquid Handler for automatic multi-well pipetting.
+This is a Python script developed to facilitate planning and designing of biological experiments in Multi-well Plate setup, followed by automatically generating an input file for the Beckman Coulter Labcyte Echo® 525 Liquid Handler (used for automatic multi-well acoustic liquid transfer) to execute the planned experiments. The script has been developed keeping in mind the case of high-throughput cell-free transcription and translation (TX-TL) experiments, however, its usage can further be expanded to all kinds of high-throughput experiments utilizing the Echo Liquid Handler for automatic multi-well pipetting.
 
 ## Background
 
