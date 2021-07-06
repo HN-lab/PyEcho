@@ -1,4 +1,4 @@
-These are Echo Setup files which were generated as an output of the script "generate\_echo\_setup\_file.py" one by one, by passing Input Excel files(filled design tables) as an Input
+These are Echo Setup files which were generated as an output of the script "generate\_echo\_setup\_file.py" one by one, by passing Input Excel files(filled design tables) to the script
 
 **Other input parameters:**  
 total_rows and total_columns were set as per the design table specifications
