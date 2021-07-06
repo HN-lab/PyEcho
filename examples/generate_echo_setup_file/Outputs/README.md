@@ -10,5 +10,5 @@ calculate_water = "yes" (for example 1 and 2) and "no" (for example 3 and 4)
 water_plate_name = "384PP_Plus_AQ_SP" (for example 1 and 2) and "" (for example 3 and 4)  
 water_source_well = \['E5', 'E6'\]
 
-The corresponding Intput (Design Table) of these Echo Setup Files can be found in the directory 
+The corresponding Input (Design Table) of these Echo Setup Files can be found in the directory 
 .. / Inputs
