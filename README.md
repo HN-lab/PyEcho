@@ -26,7 +26,7 @@ A description on how to plan experiments using the Design table spreadsheet is g
 
 The first step is to generate the design table template using the generate\_blank\_design\_table.py script to plan the experiments. An empty design table will look like the following figure:
 
-![](RackMultipart20210702-4-ft03c9_html_80597440cfe862ef.png)
+![Fig1](https://user-images.githubusercontent.com/58513314/124584536-fd766e80-de71-11eb-998f-66509d851584.png)
 
 Figure 1: A snippet of an empty design spreadsheet (96 well-plate format) with 3 reagents in the experiment
 
@@ -47,7 +47,7 @@ There are 5 major components in this template:
 5. **Sheet 2**
 : All the previous 4 components belong to Sheet 1 in the Excel file (see Figure 1). Sheet 2 in the Excel file carries information about the well numbers in the grid as it would be recognized by the machine. This Sheet would give an idea to the user about the well numbers and will facilitate experiment design. (See Figure 2)
 
-![](RackMultipart20210702-4-ft03c9_html_a048b690ff262368.png)
+![Fig2](https://user-images.githubusercontent.com/58513314/124585996-83df8000-de73-11eb-9529-c532c2d2cab1.png)
 
 _Figure 2: A snippet of Sheet 2 of the Excel file (96 well-plate format)_
 
@@ -55,7 +55,7 @@ With the modular Python Script, one can practically generate any kind of multi-w
 
 A filled 384 well plate design table will look like the following figure:
 
-![](RackMultipart20210702-4-ft03c9_html_e9ed02a456cc96f5.gif)
+<img width="495" alt="Fig3" src="https://user-images.githubusercontent.com/58513314/124592078-ad4fda00-de7a-11eb-99a2-36b5882df7cc.png">
 
 Figure 3: Example of a Completely filled design spreadsheet (384 well-plate format) with 3 reagents in the experiment
 
@@ -67,13 +67,13 @@ An important thing to note over here is that if you have multiple source wells o
 
 If you open this script on an IDLE, immediately after the import statements, you will see an assignment section in the Script (see Figure 4). Variables in this section can be assigned by the user before running the script as per requirements of the experiment.
 
-Figure 4: generate\_blank\_design\_table.py opened on PyCharm
+<img width="514" alt="Fig4" src="https://user-images.githubusercontent.com/58513314/124587790-a83c5c00-de75-11eb-9212-cf05de88b69b.png">
 
- ![](RackMultipart20210702-4-ft03c9_html_16c74aa9ae709626.gif)
+Figure 4: generate\_blank\_design\_table.py opened on PyCharm
 
 After completing the assignment, the user can directly run the script. In the end of the script, the function &quot;create\_file&quot; has been called with the appropriate arguments. The desired Experiment Design template will be generated in the same directory as this Python file.
 
-![](RackMultipart20210702-4-ft03c9_html_f4d20772c0c38f99.png)
+![Fig5](https://user-images.githubusercontent.com/58513314/124586280-dde04580-de73-11eb-865c-07450d4d78eb.png)
 
 Figure 5: last two lines of generate\_blank\_design\_table.py
 
@@ -83,7 +83,7 @@ After generating the Design template, the user can plan their experiments accord
 
 If you open this script on an IDLE, immediately after the import statements, you will see an assignment section in the Script (see Figure 6). Variables in this section shall be assigned before running the script.
 
-![](RackMultipart20210702-4-ft03c9_html_d1f3e3aa7d03a52.gif)
+<img width="495" alt="Fig6" src="https://user-images.githubusercontent.com/58513314/124588908-fc940b80-de76-11eb-9e1c-e6bf6e564470.png">
 
 Figure 6: generate\_echo\_setup\_file.py opened on PyCharm
 
@@ -103,7 +103,7 @@ _variable = [&quot;well1&quot;, &quot;well2&quot;, …. , &quot;wellN&quot;]_
 
 If you scroll to the end of the python script, you can see the two functions being called. I you want to call only one of the functions, you can do so by commenting the other function (adding a &quot;#&quot; in front of the function you don&#39;t want to call).
 
-![](RackMultipart20210702-4-ft03c9_html_11db080e44a44186.png)
+![Fig7](https://user-images.githubusercontent.com/58513314/124586439-0d8f4d80-de74-11eb-8f34-d6b8575ba794.png)
 
 _Figure 7: last two lines of generate\_echo\_setup\_file.py_
 
