@@ -158,7 +158,7 @@ Source Plate Name,Source Plate Type,Source Well,Destination Plate Name,Destinati
 1,384PP_Plus_AQ_GP,L8,1,I4,1650.0,TX-TL master mix
 1,384PP_Plus_AQ_SP,K9,1,I4,100.0,DNA_3
 1,384PP_Plus_AQ_SP,K10,1,I4,250.0,DNA_4
-1,384PP_Plus_AQ_SP,E4,1,I4,-1.0,MilliQ
+1,384PP_Plus_AQ_SP,E4,1,I4,0,MilliQ
 1,384PP_Plus_AQ_GP,L8,1,I6,1650.0,TX-TL master mix
 1,384PP_Plus_AQ_SP,K9,1,I6,100.0,DNA_3
 1,384PP_Plus_AQ_SP,K10,1,I6,0,DNA_4
@@ -174,7 +174,7 @@ Source Plate Name,Source Plate Type,Source Well,Destination Plate Name,Destinati
 1,384PP_Plus_AQ_GP,L8,1,I9,1650.0,TX-TL master mix
 1,384PP_Plus_AQ_SP,K9,1,I9,100.0,DNA_3
 1,384PP_Plus_AQ_SP,K10,1,I9,250.0,DNA_4
-1,384PP_Plus_AQ_SP,E4,1,I9,-1.0,MilliQ
+1,384PP_Plus_AQ_SP,E4,1,I9,0,MilliQ
 1,384PP_Plus_AQ_GP,L8,1,I11,1650.0,TX-TL master mix
 1,384PP_Plus_AQ_SP,K9,1,I11,100.0,DNA_3
 1,384PP_Plus_AQ_SP,K10,1,I11,0,DNA_4
@@ -186,8 +186,8 @@ Source Plate Name,Source Plate Type,Source Well,Destination Plate Name,Destinati
 1,384PP_Plus_AQ_GP,L8,1,I13,1650.0,TX-TL master mix
 1,384PP_Plus_AQ_SP,K9,1,I13,100.0,DNA_3
 1,384PP_Plus_AQ_SP,K10,1,I13,200.0,DNA_4
-1,384PP_Plus_AQ_SP,,1,I13,50.0,MilliQ
+1,384PP_Plus_AQ_SP,E4,1,I13,50.0,MilliQ
 1,384PP_Plus_AQ_GP,L8,1,I14,1650.0,TX-TL master mix
 1,384PP_Plus_AQ_SP,K9,1,I14,100.0,DNA_3
 1,384PP_Plus_AQ_SP,K10,1,I14,250.0,DNA_4
-1,384PP_Plus_AQ_SP,,1,I14,-1.0,MilliQ
+1,384PP_Plus_AQ_SP,E4,1,I14,0,MilliQ
